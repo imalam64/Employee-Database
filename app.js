@@ -7,10 +7,10 @@ var timeWorked = '';
 var totalBilled = '';
 
 $('#submit').on('click', function(event){
-var name = $('#name-input').val().trim();
-var role = $('#role-input').val().trim();
-var startDate = $('#date-input').val().trim();
-var payRate = $('#rate-input').val().trim();
+name = $('#name-input').val().trim();
+role = $('#role-input').val().trim();
+startDate = $('#date-input').val().trim();
+payRate = $('#rate-input').val().trim();
 
 
 timeWorked = ''; //startDate - dateStamp and convert to months
@@ -27,8 +27,36 @@ messagingSenderId: "883043883216"
 };
 firebase.initializeApp(config);
 
+database.ref().push({
+    name: name,
+    role: role,
+    startDate: startDate,
+    payRate: payRate,
+    timeWorked: timeWorked,
+    totalBilled: totalBilled
+});
 
+database.ref().on("value", function(snapshot) {
 
+    // Log everything that's coming out of snapshot
+    console.log(snapshot.val());
+    console.log(snapshot.val().name);
+    console.log(snapshot.val().role);
+    console.log(snapshot.val().startDate);
+    console.log(snapshot.val().payRate);
+    console.log(snapshot.val().timeWorked);
+    console.log(snapshot.val().totalBilled);
+
+    // Change the HTML to reflect
+    /* $("#name-display").text(snapshot.val().name);
+    $("#email-display").text(snapshot.val().email);
+    $("#age-display").text(snapshot.val().age);
+    $("#comment-display").text(snapshot.val().comment); */
+
+    // Handle the errors
+  }, function(errorObject) {
+    console.log("Errors handled: " + errorObject.code);
+  });
 
 });
 });
