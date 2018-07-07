@@ -3,7 +3,14 @@
     color: white;
     text-align: center;
 }
-.add .current {
+.add  {
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgray;
+    padding: 10px;
+}
+.current {
+    margin-top: 5%;
     border-style: solid;
     border-width: 1px;
     border-color: lightgray;
