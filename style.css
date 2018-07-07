@@ -1,0 +1,32 @@
+.head {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+.add .current {
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgray;
+    padding: 10px;
+}
+th{
+    font-weight: bold;
+}
+.title {
+    margin-left: 5%;
+    margin-top: 1%;
+}
+input {
+    width: 100%;
+    margin: 4px;
+}
+.submit{
+    float: right;
+    margin-top : 2%;
+    background-color: #236dc5; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}

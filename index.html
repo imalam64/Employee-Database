@@ -11,5 +11,50 @@
 </head>
 <body>
     <script src="app.js"></script>
+  <div class="container">
+      <div class="row">
+          <div class="col-md-12 head jumbotron">
+            <h1>Employee Data Managment</h1>
+              <h3>A comprehensive Directory of Employee nBillable Hours </h3>
+          </div>
+      </div>
+      <div class="row add">
+          <h3 class="title">Add Employee</h3>
+
+          <form class="col-md-12">
+              <div class="row-input">
+                  <h5>Employee Name :</h5>
+                  <input type="text" id="name-input" />
+              </div>
+              <div class="row-input">
+                  <h5>Role :</h5>
+                  <input type="text" id="role-input" />
+              </div>
+              <div class="row-input">
+                  <h5>Start Date :</h5>
+                  <input type="date" id="date-input" />
+              </div>
+              <div class="row-input">
+                  <h5>Monthly Rate :</h5>
+                  <input type="number" id="rate-input" />
+              </div>
+             <button class="submit" id="submit">Submit</button>
+          </form>
+      </div>
+      <div class="row current">
+          <h3>Current Employees</h3>
+          <table class=" table employee-table col-md-12">
+              <thead class="thead">
+                  <th>Employee Name</th>
+                  <th>Role</th>
+                  <th>Start Date</th>
+                  <th>Months Worked</th>
+                  <th>Monthly Rate ($)</th>
+                  <th>Total Billed ($)</th>
+              </thead>
+              <tr class="tbody"></tr>
+          </table>
+      </div>
+  </div>
 </body>
 </html>
