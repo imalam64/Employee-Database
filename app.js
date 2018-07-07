@@ -26,9 +26,9 @@ var name = $('#name-input').val().trim();
 var role = $('#role-input').val().trim();
 var startDate = $('#date-input').val().trim();
 var payRate = $('#rate-input').val().trim();
+var a = moment();
 
-
-timeWorked = ''; //startDate - dateStamp and convert to months
+var timeWorked = a.diff(moment(startDate, 'YYYY-MM-DD'),'months');
 totalBilled = timeWorked * payRate;
 
 database.ref().push({
