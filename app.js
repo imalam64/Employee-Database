@@ -1,12 +1,12 @@
  $('document').ready(function(){
  // Initialize Firebase
      var config = {
-         apiKey: "AIzaSyBORDUaB6LmFQBmz5qvrx0vIZk_uYk0Bfo",
+         apiKey: "////",
          authDomain: "ucla-bootcamp-test.firebaseapp.com",
          databaseURL: "https://ucla-bootcamp-test.firebaseio.com",
          projectId: "ucla-bootcamp-test",
          storageBucket: "ucla-bootcamp-test.appspot.com",
-         messagingSenderId: "883043883216"
+         messagingSenderId: "///"
      };
 firebase.initializeApp(config);
 
